@@ -8,8 +8,11 @@ The aim of this team project was to build and train an image recognition algorit
 
 ### Files for gathering data
 [Bing_Image_Downloader.ipynb](https://github.com/svenf1105/tchibo-ai/blob/f8b511d0c1d50c02015216e60a77110a9dcec8ca/Bing_Image_Downloader.ipynb) --> Download pictures from Bing Images by a certain search term.
-[image_downloader.py](https://github.com/svenf1105/tchibo-ai/blob/f8b511d0c1d50c02015216e60a77110a9dcec8ca/image_downloader.py) --> Download pictures from a csv file filled with links 
+
+[image_downloader.py](https://github.com/svenf1105/tchibo-ai/blob/f8b511d0c1d50c02015216e60a77110a9dcec8ca/image_downloader.py) --> Download pictures from a csv file filled with links.
+
 [Openimagedataset_fiftyone_downloader.ipynb](https://github.com/svenf1105/tchibo-ai/blob/4d13db5bda14a74a62c0054d40c1b2d61934a388/Openimagedataset_fiftyone_downloader.ipynb) --> Download pictures from the openimage dataset based on certain classes.
+
 ### Files regarding first tries with image classification
 
 ### Files regarding the preperation, training, inferencing of our Object Detector 
