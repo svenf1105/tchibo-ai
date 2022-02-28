@@ -5,3 +5,18 @@ The aim of this team project was to build and train an image recognition algorit
 
 
 ## Short Description for each file
+
+### Files for gathering data
+
+### Files regarding first tries with image classification
+
+### Files regarding the preperation, training, inferencing of our Object Detector 
+
+### File for the streamlit application
+
+
+
+
+
+
+--> provide link for the medium article to comprehend the project
