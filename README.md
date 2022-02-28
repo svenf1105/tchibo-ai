@@ -7,7 +7,9 @@ The aim of this team project was to build and train an image recognition algorit
 ## Short Description for each file
 
 ### Files for gathering data
-
+[Bing_Image_Downloader.ipynb] --> Download pictures from Bing Images by a certain search term.
+[image_downloader.py] --> Download pictures from a csv file filled with links 
+[Openimagedataset_fiftyone_downloader.ipynb] --> Download pictures from the openimage dataset based on certain classes.
 ### Files regarding first tries with image classification
 
 ### Files regarding the preperation, training, inferencing of our Object Detector 
