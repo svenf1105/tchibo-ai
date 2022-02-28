@@ -14,7 +14,7 @@ The aim of this team project was to build and train an image recognition algorit
 [Openimagedataset_fiftyone_downloader.ipynb](https://github.com/svenf1105/tchibo-ai/blob/4d13db5bda14a74a62c0054d40c1b2d61934a388/Openimagedataset_fiftyone_downloader.ipynb) --> Download pictures from the openimage dataset based on certain classes.
 
 ### Files regarding first tries with image classification
-[facerecognition_OpenCV.ipynb](https://github.com/svenf1105/tchibo-ai/blob/6d094bc3474fc1613369edd94f508ca3f8bc6e66/facerecognition_OpenCV.ipynb) --> Small experimenting and warm up project.
+[facerecognition_OpenCV.ipynb](https://github.com/svenf1105/tchibo-ai/blob/6d094bc3474fc1613369edd94f508ca3f8bc6e66/facerecognition_OpenCV.ipynb) --> Small experimental and warm up project.
 
 [TchiboLogoDetection_MobilNetV2.ipynb](https://github.com/svenf1105/tchibo-ai/blob/6d094bc3474fc1613369edd94f508ca3f8bc6e66/TchiboLogoDetection_MobilNetV2.ipynb) --> A try of a pre-trained model as well as a small net of our own to classify Tchibologos.
 
