@@ -16,6 +16,7 @@ from io import *
 import plotly.express as px
 
 st.set_page_config(layout='wide')
+showWarningOnDirectExecution = False
 
 header = st.container()
 csv_upload = st.container()
@@ -27,14 +28,19 @@ analytics = st.container()
 
 @st.cache()
 def load_model(selected_model):
-    filepath_centernet = r'C:\Users\paul9\OneDrive\StreamlitWebApp\Centernet_HG104_512x512_COCO17\saved_model' 
-    filepath_yolo = r''
+    filepath_centernet = r'C:\Users\paul9\Documents\Tchibo\tchibo-ai\StreamlitWebApp\Exported_centernet_512_final\saved_model' 
+    filepath_mobilenet = r'C:\Users\paul9\Documents\Tchibo\tchibo-ai\StreamlitWebApp\Exported_ssd_mobilenet_v1_640_final\saved_model'
+    filepath_resnet = r'C:\Users\paul9\Documents\Tchibo\tchibo-ai\StreamlitWebApp\Exported_ssd_resnet50_v1_640_final\saved_model'
 
-    if selected_model == 'Centernet HG104 512x512 COCO17':
+    if 'Centernet' in selected_model:
         model = tf.saved_model.load(filepath_centernet)
+        st.write('1')
+    elif 'mobilenet' in selected_model:
+        model = tf.saved_model.load(filepath_mobilenet)
+        st.write('2')
     else:
-        model = tf.saved_model.load(filepath_yolo)
-
+        model = tf.saved_model.load(filepath_resnet)
+        st.write('3')
     return model
 
 def load_image_from_url(url):
@@ -76,7 +82,7 @@ with pictures:
 
 with model:
     st.header('Model')
-    selected_model = st.radio('You can choose between two models:',('Centernet HG104 512x512 COCO17','YOLO Classifier'))
+    selected_model = st.radio('You can choose between two models:',('Centernet HG104 512x512 COCO17','ssd_mobilenet_v1_fpn_keras','ssd_resnet50_v1_fpn_keras'))
     model = load_model(selected_model)
     
     classification_threshold = st.slider('Select min detection score',0.0,1.0,step=0.01)
@@ -126,7 +132,7 @@ with model:
 
                     if (selected_processing == 'Save tagged pictures with bounding boxes') and (filepath_images is not None):
                         pic_with_detections = pic.copy()
-                        category_index = label_map_util.create_category_index_from_labelmap(r"C:\Users\paul9\OneDrive\StreamlitWebApp\Centernet_HG104_512x512_COCO17\label_map.pbtxt", use_display_name=True)
+                        category_index = label_map_util.create_category_index_from_labelmap(r"C:\Users\paul9\OneDrive\StreamlitWebApp\label_map.pbtxt", use_display_name=True)
                         viz_utils.visualize_boxes_and_labels_on_image_array(
                             pic_with_detections,
                             detections['detection_boxes'],
